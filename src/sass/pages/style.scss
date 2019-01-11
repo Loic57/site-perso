@@ -1,0 +1,94 @@
+.page-fullscreen {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+
+  .page-wrapper {
+    max-width: 1400px;
+  }
+
+  h1, p {
+    mix-blend-mode: difference;
+  }
+
+  svg {
+    stroke-dasharray: 4822;
+    stroke-dashoffset: -4822;
+    animation: dash 2s linear forwards;
+    position: absolute;
+    width: 100%;
+    height: 1400px;
+  }
+
+  @keyframes dash {
+    from {
+      stroke-dashoffset: -4822;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @media(max-width: 767px) {
+    text-align: center;
+
+
+    svg {
+      height: 800px;
+      top: -10%;
+      path {
+        stroke-width: 80;
+      }
+    }
+  }
+}
+
+
+body {
+  background-color: $body-bg;
+}
+
+
+.section-1 {
+  position: relative;
+
+  svg {
+    stroke-dasharray: 3866;
+    stroke-dashoffset: -3866;
+    animation: dash2 2s 2s linear forwards;
+    position: absolute;
+    top: 18%;
+    left: 0;
+    width: 100%;
+    height: 1400px;
+  }
+
+  @keyframes dash2 {
+    from {
+      stroke-dashoffset: -3866;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @media(max-width: 767px) {
+    text-align: center;
+
+    svg {
+      path {
+        stroke-width: 80;
+      }
+    }
+  }
+}
+
+
+.section-1, .section-2, .section-3, .section-4 {
+  padding: 5rem 0;
+
+  @media(max-width: 767px) {
+    text-align: center;
+  }
+}

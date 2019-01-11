@@ -1,0 +1,10 @@
+.page-fullscreen {
+  @include flex-container();
+  @include flex-direction-column();
+  align-items: center;
+  height: 100vh;
+
+  h1, p {color: #ffffff;letter-spacing: 1px;}
+  h1 {text-transform: uppercase;font-weight: 900;}
+
+}
